@@ -40,7 +40,7 @@ class HomeScreen extends StatelessWidget {
                     pokeImageUrl: pokeImageUrl,
                   )));
         },
-        child: const Text("Get that Pokemon!"),
+        child: const Text("Get that Pokemon!",style: TextStyle(fontSize: 25),
       ),
     )));
   }
