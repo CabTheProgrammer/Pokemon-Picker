@@ -29,7 +29,28 @@ class SecondScreen extends StatelessWidget {
                       fontWeight: FontWeight.w800,
                     )),
               ),
-              Text("Height: $pokeHeight feet",style:const TextStyle(fontSize: 25))
+              Padding(
+                padding: const EdgeInsets.only(bottom: 50),
+                child: Text("Height: $pokeHeight feet",
+                    style: const TextStyle(fontSize: 25)),
+              ),
+              Row(
+                children: const <Widget>[
+                  Expanded(
+                    child: Text('Type\n DEMO', textAlign: TextAlign.center),
+                  ),
+                  Expanded(
+                    child: Text('Attack \n test',
+                        textAlign: TextAlign.center),
+                  ),
+                  Expanded(
+                    child:
+                        Text('Defence \n test', textAlign: TextAlign.center),
+                  ),
+                ],
+              ),
+              ElevatedButton(
+                  onPressed: () {}, child: const Text("Gimme a next Pokemon!"))
             ],
           ),
         ),
