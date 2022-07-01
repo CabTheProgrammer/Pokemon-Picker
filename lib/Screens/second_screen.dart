@@ -24,10 +24,10 @@ class SecondScreen extends StatelessWidget {
                 padding: const EdgeInsets.all(20.0),
                 child: Text(pokemonName,
                     style: const TextStyle(
-                      fontSize: 40,
-                      fontFamily: "Serif",
-                      fontWeight: FontWeight.w800,
-                    )),
+                        fontSize: 40,
+                        fontFamily: "upheaval",
+                        fontWeight: FontWeight.w800,
+                        letterSpacing: 1.8)),
               ),
               Padding(
                 padding: const EdgeInsets.only(bottom: 50),
@@ -37,20 +37,31 @@ class SecondScreen extends StatelessWidget {
               Row(
                 children: const <Widget>[
                   Expanded(
-                    child: Text('Type\n DEMO', textAlign: TextAlign.center),
+                    child: Text(
+                      'TYPE\n DEMO',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(fontFamily: "Minecraft", fontSize: 18),
+                    ),
                   ),
                   Expanded(
-                    child: Text('Attack \n test',
-                        textAlign: TextAlign.center),
+                    child: Text('ATTACK \n test',
+                        textAlign: TextAlign.center,
+                        style:
+                            TextStyle(fontFamily: "Minecraft", fontSize: 18)),
                   ),
                   Expanded(
-                    child:
-                        Text('Defence \n test', textAlign: TextAlign.center),
+                    child: Text('DEFENSE \n test',
+                        textAlign: TextAlign.center,
+                        style:
+                            TextStyle(fontFamily: "Minecraft", fontSize: 18)),
                   ),
                 ],
               ),
-              ElevatedButton(
-                  onPressed: () {}, child: const Text("Gimme a next Pokemon!"))
+              Padding(
+                padding: const EdgeInsets.only(top:20),
+                child: ElevatedButton(
+                    onPressed: () {}, child: const Text("Gimme a next Pokemon!")),
+              )
             ],
           ),
         ),
