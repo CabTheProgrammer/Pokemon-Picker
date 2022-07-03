@@ -31,9 +31,16 @@ class HomeScreen extends StatelessWidget {
             int pokeHeight = data["height"];
             String pokeImageUrl =
                 data["sprites"]["other"]["official-artwork"]["front_default"];
+            int pokeAttack = data["stats"][1]["base_stat"];
+            int pokeDefense = data["stats"][2]["base_stat"];
+            String pokeType = data["types"][0]["type"]["name"];
+            pokeType = pokeType.toUpperCase();
 
             Navigator.of(context).push(MaterialPageRoute(
                 builder: (context) => SecondScreen(
+                      pokeType: pokeType,
+                      pokeDefense: pokeDefense,
+                      pokeAttack: pokeAttack,
                       pokemonName: pokemonName,
                       pokeHeight: pokeHeight,
                       pokeImageUrl: pokeImageUrl,

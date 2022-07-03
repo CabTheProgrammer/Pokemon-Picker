@@ -3,12 +3,19 @@ import 'package:flutter/material.dart';
 class SecondScreen extends StatelessWidget {
   final String pokemonName;
   final int pokeHeight;
+  final int pokeAttack;
+  final int pokeDefense;
   final String pokeImageUrl;
+  final String pokeType;
+
   const SecondScreen(
       {Key? key,
       required this.pokemonName,
       required this.pokeHeight,
-      required this.pokeImageUrl})
+      required this.pokeImageUrl,
+      required this.pokeAttack,
+      required this.pokeDefense,
+      required this.pokeType})
       : super(key: key);
 
   @override
@@ -35,25 +42,25 @@ class SecondScreen extends StatelessWidget {
                     style: const TextStyle(fontSize: 25)),
               ),
               Row(
-                children: const <Widget>[
-                  Expanded(
+                children:  <Widget>[
+                   Expanded(
                     child: Text(
-                      'TYPE\n DEMO',
+                      'TYPE\n $pokeType',
                       textAlign: TextAlign.center,
-                      style: TextStyle(fontFamily: "Minecraft", fontSize: 18),
+                      style: const TextStyle(fontFamily: "Minecraft", fontSize: 18),
                     ),
                   ),
                   Expanded(
-                    child: Text('ATTACK \n test',
+                    child: Text('ATTACK \n $pokeAttack',
                         textAlign: TextAlign.center,
                         style:
-                            TextStyle(fontFamily: "Minecraft", fontSize: 18)),
+                            const TextStyle(fontFamily: "Minecraft", fontSize: 18)),
                   ),
                   Expanded(
-                    child: Text('DEFENSE \n test',
+                    child: Text('DEFENSE \n $pokeDefense',
                         textAlign: TextAlign.center,
                         style:
-                            TextStyle(fontFamily: "Minecraft", fontSize: 18)),
+                            const TextStyle(fontFamily: "Minecraft", fontSize: 18)),
                   ),
                 ],
               ),
